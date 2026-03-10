@@ -21,7 +21,7 @@ const quickLinks: { label: string; desc: string; page: Page }[] = [
   { label: 'Information Architecture', desc: 'Feature inventory, proposed nav, multi-brand', page: 'architecture' },
   { label: 'Technical Landscape', desc: 'Current stack analysis and API strategy', page: 'tech' },
   { label: 'UX Direction', desc: 'Design principles and visual direction', page: 'ux' },
-  { label: 'Prototype Review', desc: 'What works, what needs attention, view live prototype', page: 'prototype' },
+  { label: 'UX Prototype', desc: 'Interactive prototype with multi-brand, admin, auth flows', page: 'prototype' },
   { label: 'Risks & Next Steps', desc: 'Strategic risks, open questions, opportunities', page: 'risks' },
 ]
 

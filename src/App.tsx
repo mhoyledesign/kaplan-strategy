@@ -6,14 +6,13 @@ import { UsersContext } from './pages/UsersContext'
 import { InformationArchitecture } from './pages/InformationArchitecture'
 import { TechLandscape } from './pages/TechLandscape'
 import { UXDirection } from './pages/UXDirection'
-import { PrototypeReview } from './pages/PrototypeReview'
 import { NewPrototypeReview } from './pages/NewPrototypeReview'
 import { RisksNextSteps } from './pages/RisksNextSteps'
 import { getParam, setParams } from './useUrlState'
 
-export type Page = 'dashboard' | 'discovery' | 'users' | 'architecture' | 'tech' | 'ux' | 'prototype' | 'new-prototype' | 'risks'
+export type Page = 'dashboard' | 'discovery' | 'users' | 'architecture' | 'tech' | 'ux' | 'prototype' | 'risks'
 
-const validPages: Page[] = ['dashboard', 'discovery', 'users', 'architecture', 'tech', 'ux', 'prototype', 'new-prototype', 'risks']
+const validPages: Page[] = ['dashboard', 'discovery', 'users', 'architecture', 'tech', 'ux', 'prototype', 'risks']
 
 function readPageFromUrl(): Page {
   const p = getParam('page')
@@ -46,8 +45,7 @@ export default function App() {
       case 'architecture': return <InformationArchitecture />
       case 'tech': return <TechLandscape />
       case 'ux': return <UXDirection />
-      case 'prototype': return <PrototypeReview />
-      case 'new-prototype': return <NewPrototypeReview />
+      case 'prototype': return <NewPrototypeReview />
       case 'risks': return <RisksNextSteps />
     }
   }

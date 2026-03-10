@@ -1,7 +1,50 @@
 import {
   ExternalLink, Monitor, CheckCircle2, Palette, Shield, Users,
-  Wrench, Key, Eye, BarChart3
+  Wrench, Key, Eye, BarChart3, MessageSquare
 } from 'lucide-react'
+
+const designFoundation = [
+  {
+    title: 'Dashboard Hub',
+    desc: 'Alerts + quick-access cards + newsfeed directly solve the "glaze-over" problem. Agents see what\'s urgent and can jump to their task in one click. The newsfeed gives Kristen a place to publish without developer help.',
+    tags: ['solves glaze-over', 'new capability'],
+  },
+  {
+    title: 'Modal PDF Viewer',
+    desc: 'In-page modal with progress indicator for statement PDFs. Eliminates the pop-up blocker complaint — the #1 user frustration. Print + download in the modal footer keeps the agent in context.',
+    tags: ['solves pop-up blockers', 'critical fix'],
+  },
+  {
+    title: 'Statement Filter Presets',
+    desc: '"Recent" (default), "Past Week," "Past 2 Weeks," "Date Range." One-click presets for the most common needs. Three clicks from login to viewing most recent statement.',
+    tags: ['speed-to-content', '90% use case'],
+  },
+  {
+    title: 'Fluent Design Language',
+    desc: 'Microsoft\'s system — layered surfaces, restrained color, Segoe UI typography. Fits "just on the right side of professional" (Kristen). Corporate enough for Dave, not flashy enough to alarm agents. .NET team familiarity is a bonus for buy-in.',
+    tags: ['stakeholder-aligned'],
+  },
+  {
+    title: 'Sidebar Navigation',
+    desc: 'Reduces 11 mixed-type items (pages, PDFs, external links, mailto) to consistently-typed internal pages. Collapsible to icon-only mode. Eliminates the current portal\'s confusing dual-navigation.',
+    tags: ['simplification'],
+  },
+  {
+    title: 'Consolidated Library',
+    desc: 'Replaces scattered PDFs across multiple pages and the neglected Video Library into one searchable, filterable interface.',
+    tags: ['reduces clutter', 'CMS-ready'],
+  },
+  {
+    title: 'Progressive Disclosure',
+    desc: 'Headlines → summaries → full content. Newsfeed items expand inline. Documents open in modals. The agent is never confronted with more than they need at any given moment.',
+    tags: ['information hierarchy'],
+  },
+  {
+    title: 'Employee Directory Cards',
+    desc: 'Avatar initials (color-coded), name, role, terminal, email. Real-time search replacing clunky postback forms.',
+    tags: ['modernization'],
+  },
+]
 
 const improvements = [
   {
@@ -60,20 +103,29 @@ const improvements = [
   },
 ]
 
+const openQuestions = [
+  'Does "Tools" work as a nav label, or should Trinium Dispatch / Remote Assistance be individual sidebar items?',
+  'Should dashboard quick-access cards be configurable per user, or fixed by role?',
+  'Where does the "Submit a Suggestion" function live — feedback form in footer? User menu?',
+  'How does admin experience (user management, CMS, freight quotes) get accessed — separate admin portal or integrated views?',
+  'SSO / Active Directory — Sean mentioned potential integration with Microsoft AD. Even if Phase 2, the authentication architecture must accommodate this.',
+  'Employee & Terminal detail views — are the card summaries sufficient, or do agents need full drilldown detail pages?',
+]
+
 export function NewPrototypeReview() {
   return (
     <div className="p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto">
       <div className="mb-8 animate-fade-in">
         <div className="text-[11px] font-semibold tracking-[0.2em] uppercase text-brand-green-light mb-2">
-          New Prototype
+          UX Prototype
         </div>
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mb-3">
-          Enhanced Portal Concept
+          Interactive Portal Prototype
         </h1>
         <p className="text-muted-foreground text-base max-w-2xl leading-relaxed">
-          A new prototype built from scratch to address every gap identified in discovery.
-          Same Fluent Design language, same sidebar navigation pattern — but with multi-brand theming,
-          complete auth flows, CMS indicators, admin tools, and all the features that were missing.
+          A fully interactive prototype addressing every gap identified in discovery.
+          Fluent Design language with sidebar navigation, multi-brand theming,
+          complete auth flows, CMS indicators, admin tools, and permission-based views.
         </p>
       </div>
 
@@ -88,9 +140,9 @@ export function NewPrototypeReview() {
           <Monitor size={24} className="text-brand-green-light" />
         </div>
         <div className="flex-1">
-          <div className="text-base font-bold">Launch New Portal Prototype</div>
+          <div className="text-base font-bold">Launch UX Prototype</div>
           <div className="text-xs text-muted-foreground mt-0.5">
-            Opens the enhanced agent portal concept in a new tab. Includes multi-brand switching,
+            Opens the interactive agent portal prototype in a new tab. Includes multi-brand switching,
             password reset flow, admin panel, and all discovery-identified features.
           </div>
         </div>
@@ -128,11 +180,39 @@ export function NewPrototypeReview() {
         </div>
       </div>
 
-      {/* What's new */}
-      <div className="mb-6 animate-fade-in stagger-3">
+      {/* Design Foundation */}
+      <div className="mb-10 animate-fade-in stagger-3">
         <h2 className="text-xs font-semibold tracking-[0.2em] uppercase text-brand-green-light mb-4 flex items-center gap-2">
           <CheckCircle2 size={14} />
-          What This Prototype Adds
+          Design Foundation
+        </h2>
+        <div className="space-y-3">
+          {designFoundation.map((item, i) => (
+            <div key={item.title} className={`bg-card border border-border rounded-xl p-5 animate-fade-in stagger-${Math.min(i + 1, 8)}`}>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 size={16} className="text-brand-green-light shrink-0 mt-0.5" />
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 flex-wrap mb-1">
+                    <span className="text-sm font-bold">{item.title}</span>
+                    {item.tags.map((tag) => (
+                      <span key={tag} className="text-[9px] font-semibold tracking-wider uppercase px-1.5 py-0.5 rounded-full bg-brand-green/10 text-brand-green-light">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Discovery gap closers */}
+      <div className="mb-10 animate-fade-in stagger-4">
+        <h2 className="text-xs font-semibold tracking-[0.2em] uppercase text-brand-green-light mb-4 flex items-center gap-2">
+          <CheckCircle2 size={14} />
+          Discovery Gaps Addressed
         </h2>
         <div className="space-y-3">
           {improvements.map((item, i) => {
@@ -159,6 +239,24 @@ export function NewPrototypeReview() {
             )
           })}
         </div>
+      </div>
+
+      {/* Open questions */}
+      <div className="bg-card border border-border rounded-xl p-6 animate-fade-in stagger-5">
+        <h2 className="text-sm font-bold mb-4 flex items-center gap-2">
+          <MessageSquare size={16} className="text-brand-teal" />
+          Open Questions for Stakeholder Review
+        </h2>
+        <ol className="space-y-3">
+          {openQuestions.map((q, i) => (
+            <li key={i} className="flex items-start gap-3 text-xs text-muted-foreground leading-relaxed">
+              <span className="w-5 h-5 rounded-full bg-brand-teal/15 flex items-center justify-center shrink-0 text-[10px] font-bold text-brand-teal">
+                {i + 1}
+              </span>
+              {q}
+            </li>
+          ))}
+        </ol>
       </div>
     </div>
   )
