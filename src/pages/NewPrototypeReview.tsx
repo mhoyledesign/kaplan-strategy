@@ -79,7 +79,7 @@ export function NewPrototypeReview() {
 
       {/* Launch CTA */}
       <a
-        href="https://thundertech-kaplan-agent-portal-prototype-v2-production.up.railway.app"
+        href="https://surprising-prosperity-production.up.railway.app"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-4 bg-brand-green/10 border border-brand-green/30 rounded-xl p-5 mb-8 hover:bg-brand-green/15 transition-colors group animate-fade-in stagger-1"
