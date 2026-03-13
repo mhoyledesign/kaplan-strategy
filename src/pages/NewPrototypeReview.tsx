@@ -16,7 +16,7 @@ const designFoundation = [
   },
   {
     title: 'Statement Filter Presets',
-    desc: '"Recent" (default), "Past Week," "Past 2 Weeks," "Date Range." One-click presets for the most common needs. Three clicks from login to viewing most recent statement.',
+    desc: '"Recent" (default), "Past Week," "Past 2 Weeks," "Date Range." One-click presets for the most common needs. Three clicks from sign-in to viewing most recent statement.',
     tags: ['speed-to-content', '90% use case'],
   },
   {
@@ -109,7 +109,7 @@ const openQuestions = [
   'How does admin experience (user management, CMS, freight quotes) get accessed — separate admin portal or integrated views?',
   'SSO / Active Directory — Shawn mentioned potential integration with Microsoft AD. Even if Phase 2, the authentication architecture must accommodate this.',
   'Employee & Terminal detail views — are the card summaries sufficient, or do agents need full drilldown detail pages?',
-  'How should the Trinium checkbox (statement access) sync to the portal — real-time API check, or cached at login?',
+  'How should the Trinium checkbox (statement access) sync to the portal — real-time API check, or cached at sign-in?',
 ]
 
 export function NewPrototypeReview() {
@@ -175,7 +175,7 @@ export function NewPrototypeReview() {
               </div>
               <div className="flex items-start gap-2">
                 <span className="w-5 h-5 rounded-full bg-brand-green/15 flex items-center justify-center shrink-0 text-[10px] font-bold text-brand-green-light">5</span>
-                <span>Try the <strong>password reset flow</strong> from the login page "Forgot your password?" link</span>
+                <span>Try the <strong>password reset flow</strong> from the sign-in page "Forgot your password?" link</span>
               </div>
               <div className="flex items-start gap-2">
                 <span className="w-5 h-5 rounded-full bg-brand-green/15 flex items-center justify-center shrink-0 text-[10px] font-bold text-brand-green-light">6</span>

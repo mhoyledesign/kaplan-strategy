@@ -269,7 +269,7 @@ export function UXDirection() {
           <div className="text-[11px] font-semibold tracking-[0.15em] uppercase text-brand-green-light mb-2">Multi-Brand Architecture</div>
           <p className="text-sm text-muted-foreground leading-relaxed mb-3">
             6 companies with identical functionality but zero visual crossover. One CMS, one content manager (Kristen).
-            CSS custom properties on :root swap the entire theme at login — no separate builds, no forks.
+            CSS custom properties on :root swap the entire theme at sign-in — no separate builds, no forks.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {['Kaplan Trucking', 'Horizon Freight System', 'TRX', 'DD&S Express', 'Eastern Express', 'Single Source'].map((brand) => (

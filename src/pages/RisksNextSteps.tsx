@@ -7,7 +7,7 @@ const risks = [
   {
     risk: 'Brand Cross-Contamination',
     desc: 'If a Kaplan user sees a Horizon logo, the president "will go through the roof." This is the single hardest technical constraint. Must be airtight.',
-    mitigation: 'Token-based theming system with brand context at login. Automated testing for cross-brand leaks.',
+    mitigation: 'Token-based theming system with brand context at sign-in. Automated testing for cross-brand leaks.',
     severity: 'critical',
     icon: Shield,
   },

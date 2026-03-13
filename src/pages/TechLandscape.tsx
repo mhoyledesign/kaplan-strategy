@@ -27,7 +27,7 @@ const securityIssues = [
   'No Secure flag on auth cookie',
   'No CSRF token beyond ASP.NET EventValidation',
   'No Content-Security-Policy headers',
-  'No rate limiting on login attempts',
+  'No rate limiting on sign-in attempts',
   'Remote Assistance link uses HTTP (not HTTPS)',
   'ViewState not encrypted (base64, default behavior)',
   'Password reset fails ~75% of the time',
@@ -65,7 +65,7 @@ export function TechLandscape() {
         </div>
         <p className="text-sm text-muted-foreground leading-relaxed">
           The entire front-end is "static HTML with ASP.NET server controls bolted on." Dynamic portions
-          are limited to: login/auth, statement selection (UpdatePanel), employee/terminal search, SSRS reports,
+          are limited to: auth, statement selection (UpdatePanel), employee/terminal search, SSRS reports,
           and the SharedWeb location tools. Markup errors exist on every page (styles rendered outside the closing HTML tag).
         </p>
       </div>

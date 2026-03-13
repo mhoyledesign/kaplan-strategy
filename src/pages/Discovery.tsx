@@ -90,7 +90,7 @@ const decisions = [
 
 const requirements = [
   { category: 'Settlement Statements', priority: 'must', items: ['PDF viewer without pop-up blockers', 'Date range filtering', 'Single and multi-date selection', 'Permission levels (owner vs employee)', 'Agent/contractor context switching'] },
-  { category: 'User Management', priority: 'must', items: ['Controlled signup (not self-serve)', 'Reliable password reset', 'Multi-terminal access under single login', 'Enable/disable notifications', '~3 agents added/terminated weekly'] },
+  { category: 'User Management', priority: 'must', items: ['Controlled signup (not self-serve)', 'Reliable password reset', 'Multi-terminal access under single sign-in', 'Enable/disable notifications', '~3 agents added/terminated weekly'] },
   { category: 'Content Management', priority: 'must', items: ['CMS access for Kristen', 'Easy image resizing/upload', 'PDF upload for flyers and manuals', 'Slider/banner for announcements', 'Content management across all 5+ brands'] },
   { category: 'Multi-Brand', priority: 'must', items: ['5 (soon 6) distinct brands', 'Zero visual cross-contamination', 'Mostly color + logo differences', 'Single admin managing all', 'Brand-specific content capability'] },
   { category: 'Directories', priority: 'should', items: ['Employee directory with search (~100 employees)', 'Terminal list with search (58+ terminals)', 'Safety resources hub', 'Document library'] },
