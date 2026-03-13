@@ -107,7 +107,7 @@ const improvements = [
 const openQuestions = [
   'Should dashboard quick-access cards be configurable per user, or fixed by role?',
   'How does admin experience (user management, CMS, freight quotes) get accessed — separate admin portal or integrated views?',
-  'SSO / Active Directory — Sean mentioned potential integration with Microsoft AD. Even if Phase 2, the authentication architecture must accommodate this.',
+  'SSO / Active Directory — Shawn mentioned potential integration with Microsoft AD. Even if Phase 2, the authentication architecture must accommodate this.',
   'Employee & Terminal detail views — are the card summaries sufficient, or do agents need full drilldown detail pages?',
   'How should the Trinium checkbox (statement access) sync to the portal — real-time API check, or cached at login?',
 ]

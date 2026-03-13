@@ -59,7 +59,7 @@ const sessions = [
     id: 'session2',
     title: 'Working Session 2',
     date: 'Feb 2026',
-    participants: ['Sean (Dev Manager)', 'Steve', 'JD', 'Madeline', 'Jeremy'],
+    participants: ['Shawn Cope (Dev Manager)', 'Steve', 'JD', 'Madeline', 'Jeremy'],
     topics: ['Technical architecture', 'API strategy', 'Authentication', 'Development approach'],
     findings: [
       { type: 'technical', text: 'Current portal is static HTML with no CMS. Password reset fails 75% of time.' },

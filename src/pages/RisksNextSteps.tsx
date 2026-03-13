@@ -50,11 +50,11 @@ const risks = [
 
 const openQuestions = [
   { question: 'What are the exact permission levels and roles Steve wants?', owner: 'Steve/Adam', impact: 'Architecture', status: 'Waiting on documentation' },
-  { question: 'SSO/Active Directory — Phase 1 or Phase 2?', owner: 'JD/Sean', impact: 'Auth architecture', status: 'Need decision' },
-  { question: 'How should Equipment Unloading Locations integrate?', owner: 'Sean', impact: 'API scope', status: 'Need discussion' },
+  { question: 'SSO/Active Directory — Phase 1 or Phase 2?', owner: 'JD/Shawn', impact: 'Auth architecture', status: 'Need decision' },
+  { question: 'How should Equipment Unloading Locations integrate?', owner: 'Shawn', impact: 'API scope', status: 'Need discussion' },
   { question: 'Which SSRS reports are actively used vs. can be dropped?', owner: 'Steve', impact: 'Feature scope', status: 'Need data' },
-  { question: 'What is the hosting plan — on-prem IIS, Azure, or other?', owner: 'JD/Sean', impact: 'Deployment', status: 'Need decision' },
-  { question: 'Will Kaplan provide a staging API for development?', owner: 'Sean', impact: 'Dev timeline', status: 'Need commitment' },
+  { question: 'What is the hosting plan — on-prem IIS, Azure, or other?', owner: 'JD/Shawn', impact: 'Deployment', status: 'Need decision' },
+  { question: 'Will Kaplan provide a staging API for development?', owner: 'Shawn', impact: 'Dev timeline', status: 'Need commitment' },
 ]
 
 const opportunities = [
@@ -69,7 +69,7 @@ const opportunities = [
 const nextSteps = [
   { step: 'Stakeholder Review', desc: 'Present this strategy and prototype to Dave, JD, Steve, Kristen. Get visual buy-in.', status: 'next' },
   { step: 'Permissions Documentation', desc: 'Steve/Adam to provide detailed permission levels and role definitions.', status: 'waiting' },
-  { step: 'Session with Sean', desc: 'Define API contract, hosting plan, staging environment, and development workflow.', status: 'scheduled' },
+  { step: 'Session with Shawn', desc: 'Define API contract, hosting plan, staging environment, and development workflow.', status: 'scheduled' },
   { step: 'Prototype Feedback Round', desc: 'Share prototype with select agents for usability feedback.', status: 'upcoming' },
   { step: 'Phase 2 Proposal', desc: 'Scope, timeline, and budget for design and build phase based on approved strategy.', status: 'upcoming' },
 ]

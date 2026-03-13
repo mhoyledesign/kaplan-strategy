@@ -252,7 +252,7 @@ export function Dashboard({ onNavigate }: Props) {
                 { name: 'Dave', role: 'President', note: 'Final decision-maker. Needs visual mockups.' },
                 { name: 'JD Ross', role: 'IT Director', note: 'Secure, stable, owner-approved.' },
                 { name: 'Steve Hardin', role: 'IT Services', note: 'Day-to-day contact. Permissions.' },
-                { name: 'Sean', role: 'Dev Manager', note: 'Leads .NET API team.' },
+                { name: 'Shawn Cope', role: 'Dev Manager', note: 'Leads .NET API team.' },
                 { name: 'Kristen Steele', role: 'HR/Communications', note: 'Content manager. Needs CMS.' },
               ].map((p) => (
                 <div key={p.name} className="flex items-start gap-3">

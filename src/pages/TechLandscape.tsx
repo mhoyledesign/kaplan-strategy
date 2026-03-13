@@ -180,7 +180,7 @@ export function TechLandscape() {
             <ul className="space-y-1.5">
               {[
                 'React (Kaplan team already uses it)',
-                'CSS modules over Tailwind (Sean\'s team preference)',
+                'CSS modules over Tailwind (Shawn\'s team preference)',
                 'Material UI (MUI) for component library',
                 'Node.js acceptable for prototyping',
                 'Current SharedWeb has multi-brand theming config (currentCompany object)',
