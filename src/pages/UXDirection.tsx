@@ -1,6 +1,8 @@
 import {
   Layers, Palette, Type, MousePointer, Eye, Zap,
-  Monitor, Smartphone, Printer, Grid3x3
+  Monitor, Smartphone, Printer, Grid3x3,
+  LayoutDashboard, FileText, Building2, Users, Newspaper, BookOpen,
+  BarChart3, Link2, Wrench
 } from 'lucide-react'
 
 const principles = [
@@ -35,18 +37,30 @@ const componentPatterns = [
   { label: 'Progress Indicators', desc: 'All API-driven content loads. Current portal gives zero feedback during waits.', color: '#FFA300' },
 ]
 
+const proposedNav = [
+  { icon: LayoutDashboard, label: 'Home', desc: 'Hub: action items + quick-access cards + newsfeed', source: 'New' },
+  { icon: FileText, label: 'Statements', desc: 'Filter presets + modal PDF viewer + previous statement', source: 'Redesigned' },
+  { icon: Building2, label: 'Terminal List', desc: 'Card grid, real-time search', source: 'Modernized' },
+  { icon: Users, label: 'Employee Directory', desc: 'Card grid, avatar initials, real-time search', source: 'Modernized' },
+  { icon: Newspaper, label: 'News & Updates', desc: 'Full newsfeed archive with category filters', source: 'New' },
+  { icon: BookOpen, label: 'Library', desc: 'Documents + videos + training, search + category/type filter', source: 'New' },
+  { icon: BarChart3, label: 'Reports', desc: 'Aggregated report index by category', source: 'New' },
+  { icon: Link2, label: 'Carrier Approval', desc: 'External link to RMIS', source: 'Kept' },
+  { icon: Wrench, label: 'Tools & Resources', desc: 'Equipment Unloading, Safety, Feedback, Trinium, Remote Assistance', source: 'New' },
+]
+
 export function UXDirection() {
   return (
     <div className="p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto">
       <div className="mb-8 animate-fade-in">
         <div className="text-[11px] font-semibold tracking-[0.2em] uppercase text-brand-green-light mb-2">
-          UX Direction
+          UX Vision
         </div>
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mb-3">
           Design Principles & Visual Direction
         </h1>
         <p className="text-muted-foreground text-base max-w-2xl leading-relaxed">
-          Informed by stakeholder feedback, user research, and Jeremy's Fluent Design approach.
+          Informed by stakeholder feedback, user research, and the Fluent Design approach.
           The goal: modern but not shocking. Professional but not corporate. Clean and fast.
         </p>
       </div>
@@ -96,7 +110,7 @@ export function UXDirection() {
           <h2 className="text-sm font-bold">Fluent Design Language</h2>
         </div>
         <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-          Jeremy proposes Microsoft's Fluent Design system as the visual foundation. This aligns well with Kristen's
+          thunder::tech proposes Microsoft's Fluent Design system as the visual foundation. This aligns well with Kristen's
           "right side of professional" directive and the .NET team's familiarity with the Microsoft ecosystem.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -201,6 +215,68 @@ export function UXDirection() {
             </div>
           )
         })}
+      </div>
+
+      {/* Information Architecture */}
+      <div className="mt-10">
+        <h2 className="text-xl sm:text-2xl font-black tracking-tight mb-3">
+          Information Architecture
+        </h2>
+        <p className="text-muted-foreground text-sm max-w-2xl leading-relaxed mb-6">
+          Current portal has 11 mixed-type nav items with heavy duplication. Proposed: 9 consistently-typed
+          sidebar pages with sub-routes for tools. Safety, Equipment Unloading, and Feedback live under
+          Tools & Resources.
+        </p>
+
+        {/* Proposed Navigation */}
+        <div className="mb-8">
+          <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-4">
+            Sidebar Navigation (9 items)
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {proposedNav.map((item, i) => {
+              const Icon = item.icon
+              return (
+                <div key={item.label} className={`bg-card border border-border rounded-xl p-4 flex gap-3 animate-fade-in stagger-${Math.min(i + 1, 8)}`}>
+                  <div className="w-9 h-9 rounded-lg bg-brand-green/10 flex items-center justify-center shrink-0">
+                    <Icon size={16} className="text-brand-green-light" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2">
+                      <div className="text-xs font-bold">{item.label}</div>
+                      <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-muted text-muted-foreground">{item.source}</span>
+                    </div>
+                    <div className="text-[11px] text-muted-foreground mt-0.5">{item.desc}</div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* Utility area */}
+        <div className="bg-card border border-border rounded-xl p-5 mb-6">
+          <h3 className="text-[10px] font-semibold tracking-wider uppercase text-muted-foreground mb-3">Utility Area (top bar + user menu)</h3>
+          <div className="flex flex-wrap gap-2">
+            {['Profile / Password', 'Logout', 'Site Admin (permission-gated)', 'Notes toggle (demo)', 'Brand switcher (demo)', 'Role switcher (demo)'].map((item) => (
+              <span key={item} className="text-[11px] px-3 py-1.5 rounded-lg bg-muted text-muted-foreground">{item}</span>
+            ))}
+          </div>
+        </div>
+
+        {/* Multi-brand callout */}
+        <div className="bg-brand-green/5 border border-brand-green/20 rounded-xl p-5">
+          <div className="text-[11px] font-semibold tracking-[0.15em] uppercase text-brand-green-light mb-2">Multi-Brand Architecture</div>
+          <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+            6 companies with identical functionality but zero visual crossover. One CMS, one content manager (Kristen).
+            CSS custom properties on :root swap the entire theme at login — no separate builds, no forks.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {['Kaplan Trucking', 'Horizon Freight System', 'TRX', 'DD&S Express', 'Eastern Express', 'Single Source'].map((brand) => (
+              <div key={brand} className="text-[11px] px-3 py-2 rounded-lg bg-card border border-border text-muted-foreground">{brand}</div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )

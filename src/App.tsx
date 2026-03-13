@@ -3,16 +3,15 @@ import { TopNav } from './components/TopNav'
 import { Dashboard } from './pages/Dashboard'
 import { Discovery } from './pages/Discovery'
 import { UsersContext } from './pages/UsersContext'
-import { InformationArchitecture } from './pages/InformationArchitecture'
 import { TechLandscape } from './pages/TechLandscape'
 import { UXDirection } from './pages/UXDirection'
 import { NewPrototypeReview } from './pages/NewPrototypeReview'
 import { RisksNextSteps } from './pages/RisksNextSteps'
 import { getParam, setParams } from './useUrlState'
 
-export type Page = 'dashboard' | 'discovery' | 'users' | 'architecture' | 'tech' | 'ux' | 'prototype' | 'risks'
+export type Page = 'dashboard' | 'discovery' | 'users' | 'tech' | 'ux' | 'prototype' | 'risks'
 
-const validPages: Page[] = ['dashboard', 'discovery', 'users', 'architecture', 'tech', 'ux', 'prototype', 'risks']
+const validPages: Page[] = ['dashboard', 'discovery', 'users', 'tech', 'ux', 'prototype', 'risks']
 
 function readPageFromUrl(): Page {
   const p = getParam('page')
@@ -42,7 +41,6 @@ export default function App() {
       case 'dashboard': return <Dashboard onNavigate={handleNavigate} />
       case 'discovery': return <Discovery />
       case 'users': return <UsersContext />
-      case 'architecture': return <InformationArchitecture />
       case 'tech': return <TechLandscape />
       case 'ux': return <UXDirection />
       case 'prototype': return <NewPrototypeReview />

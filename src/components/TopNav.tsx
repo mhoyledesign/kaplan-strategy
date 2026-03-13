@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {
-  LayoutDashboard, Search, Users, Server, Map, Palette,
+  LayoutDashboard, Search, Users, Server, Palette,
   Monitor, AlertTriangle, Menu, X
 } from 'lucide-react'
 import type { Page } from '../App'
@@ -9,9 +9,8 @@ const navItems: { id: Page; label: string; icon: typeof LayoutDashboard }[] = [
   { id: 'dashboard', label: 'Overview', icon: LayoutDashboard },
   { id: 'discovery', label: 'Discovery', icon: Search },
   { id: 'users', label: 'Users', icon: Users },
-  { id: 'architecture', label: 'Architecture', icon: Map },
   { id: 'tech', label: 'Technical', icon: Server },
-  { id: 'ux', label: 'UX Direction', icon: Palette },
+  { id: 'ux', label: 'UX Vision', icon: Palette },
   { id: 'prototype', label: 'UX Prototype', icon: Monitor },
   { id: 'risks', label: 'Risks & Next', icon: AlertTriangle },
 ]

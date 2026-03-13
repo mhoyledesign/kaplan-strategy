@@ -18,9 +18,8 @@ const stats = [
 const quickLinks: { label: string; desc: string; page: Page }[] = [
   { label: 'Discovery', desc: 'Meeting notes, key decisions, and requirements', page: 'discovery' },
   { label: 'Users & Context', desc: 'Agent personas, pain points, and behaviors', page: 'users' },
-  { label: 'Information Architecture', desc: 'Feature inventory, proposed nav, multi-brand', page: 'architecture' },
   { label: 'Technical Landscape', desc: 'Current stack analysis and API strategy', page: 'tech' },
-  { label: 'UX Direction', desc: 'Design principles and visual direction', page: 'ux' },
+  { label: 'UX Vision', desc: 'Design principles, information architecture, and visual direction', page: 'ux' },
   { label: 'UX Prototype', desc: 'Interactive prototype with multi-brand, admin, auth flows', page: 'prototype' },
   { label: 'Risks & Next Steps', desc: 'Strategic risks, open questions, opportunities', page: 'risks' },
 ]
@@ -49,7 +48,7 @@ export function Dashboard({ onNavigate }: Props) {
         'Live portal scrape and technical audit',
         'Information architecture extraction',
         'Three-way comparison analysis',
-        'Interactive prototype (Jeremy)',
+        'UX prototype for stakeholder review and scoping',
       ],
       remaining: [
         'Stakeholder review of strategy & prototype',
@@ -88,9 +87,9 @@ export function Dashboard({ onNavigate }: Props) {
           Kaplan Agent Portal<br />Redesign Strategy
         </h1>
         <p className="text-muted-foreground text-base max-w-2xl leading-relaxed">
-          Replace a 30-year-old static HTML agent portal with a modern, CMS-driven experience
-          — across 5 (soon 6) separately branded trucking companies with zero cross-contamination.
-          Phase 1 is modernizing existing functionality. Build a foundation to stack on.
+          Modernize the Kaplan agent portal with a clean, CMS-driven experience that mirrors
+          existing functionality — and build the foundation for future portals across Bessemer's
+          family of companies. One codebase, multi-brand theming, zero cross-contamination.
         </p>
       </div>
 
@@ -122,8 +121,9 @@ export function Dashboard({ onNavigate }: Props) {
         </div>
         <p className="text-sm text-muted-foreground leading-relaxed">
           Four working sessions completed. Portal scraped, analyzed, and documented.
-          Jeremy's interactive prototype built. Three-way comparison (discovery notes vs. live portal vs. prototype)
-          complete. Ready for stakeholder review and Phase 2 scoping.
+          UX prototype built to visualize the future experience and guide scoping discussions.
+          Three-way comparison (discovery notes vs. live portal vs. prototype) complete.
+          Ready for stakeholder review and Phase 2 scoping.
         </p>
       </div>
 
